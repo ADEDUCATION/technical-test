@@ -1,0 +1,801 @@
+{
+  "schools": [
+    {
+      "id": "esd",
+      "name": "ESD",
+      "fullName": "École Supérieure du Digital",
+      "description": "L'école de référence pour les métiers du numérique : marketing digital, UX/UI, vidéo, data et création digitale.",
+      "domain": "Digital & Numérique",
+      "website": "https://ecole-du-digital.com",
+      "color": "#6366F1",
+      "formations": [
+        {
+          "id": "esd-bachelor-creation-digitale",
+          "name": "Création digitale & Design d'interface",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["design", "ux-ui", "audiovisuel", "création", "digital"],
+          "description": "Devenez expert du design digital : UI design, motion design, product design et technologies créatives.",
+          "careers": ["UX Designer", "UI Designer", "Motion Designer", "Webdesigner", "Directeur artistique digital"]
+        },
+        {
+          "id": "esd-bachelor-marketing-digital",
+          "name": "Marketing digital & IA",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["marketing", "data", "business", "digital", "stratégie"],
+          "description": "Maîtrisez les leviers du web-marketing : social media, SEO, publicité en ligne, analyse de données et IA.",
+          "careers": ["Traffic Manager", "Social Media Manager", "SEO/SEA Consultant", "Growth Hacker", "Data Analyst"]
+        },
+        {
+          "id": "esd-bachelor-video-motion",
+          "name": "Vidéo & Motion",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["audiovisuel", "création", "vidéo", "motion", "storytelling"],
+          "description": "Formez-vous à la création de contenus vidéo : réalisation, montage, motion design et storytelling visuel.",
+          "careers": ["Motion Designer", "Vidéaste", "Réalisateur", "Monteur vidéo", "Content Creator"]
+        },
+        {
+          "id": "esd-bachelor-no-code",
+          "name": "Chef de projet no-code",
+          "level": "Bachelor 3",
+          "duration": "1 an",
+          "alternance": true,
+          "tags": ["tech", "gestion-projet", "digital", "innovation"],
+          "description": "Apprenez à créer des applications et sites web sans coder grâce aux outils no-code.",
+          "careers": ["Chef de projet digital", "Product Owner", "No-code Developer", "Consultant digital"]
+        },
+        {
+          "id": "esd-mastere-ux-ui",
+          "name": "User Experience & Interface",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["ux-ui", "design", "produit", "digital", "utilisateur"],
+          "description": "Concevez des expériences utilisateurs simples, intuitives et efficaces pour le web et le mobile.",
+          "careers": ["UX Designer", "Product Designer", "UX Researcher", "Lead UX", "Ergonome IHM"]
+        },
+        {
+          "id": "esd-mastere-digital-design",
+          "name": "Digital Design & Creative Technologies",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["design", "tech", "innovation", "création", "digital"],
+          "description": "Exploitez les technologies pour imaginer des campagnes et événements digitaux innovants.",
+          "careers": ["Creative Technologist", "Directeur artistique digital", "Digital Designer", "Innovation Designer"]
+        },
+        {
+          "id": "esd-mastere-business-ecommerce",
+          "name": "Business Developer & E-commerce",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["business", "marketing", "commerce", "stratégie", "digital"],
+          "description": "Maîtrisez les leviers du e-commerce : SEO, SEA, retargeting, email automation et growth.",
+          "careers": ["E-commerce Manager", "Business Developer", "Growth Manager", "Responsable acquisition"]
+        },
+        {
+          "id": "esd-mastere-data-marketing",
+          "name": "Data Marketing & IA",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["data", "marketing", "tech", "analytique", "stratégie"],
+          "description": "Formez-vous à la data visualization, l'analyse de données et l'intelligence artificielle appliquée au marketing.",
+          "careers": ["Data Analyst", "Data Marketing Manager", "Consultant CRM", "Traffic Manager", "IA Specialist"]
+        },
+        {
+          "id": "esd-mastere-video-contents",
+          "name": "Vidéo & Digital Contents",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["audiovisuel", "vidéo", "création", "storytelling", "digital"],
+          "description": "Maîtrisez toute la chaîne de production vidéo : script, prise de vue, montage, sound design et diffusion.",
+          "careers": ["Réalisateur", "Directeur de production", "Content Manager", "Vidéaste", "YouTube Creator"]
+        }
+      ]
+    },
+    {
+      "id": "esp",
+      "name": "ESP",
+      "fullName": "École Supérieure de Publicité",
+      "description": "La 1ère école de communication en France depuis 1927. Communication, marketing, publicité et influence.",
+      "domain": "Communication & Marketing",
+      "website": "https://espub.org",
+      "color": "#EC4899",
+      "formations": [
+        {
+          "id": "esp-bachelor-com-pub",
+          "name": "Communication & Publicité",
+          "level": "Bachelor",
+          "duration": "2 ans",
+          "alternance": false,
+          "tags": ["communication", "publicité", "marketing", "média", "créatif"],
+          "description": "Formation généraliste pour acquérir les compétences professionnelles en communication et publicité.",
+          "careers": ["Chargé de communication", "Assistant chef de pub", "Community Manager"]
+        },
+        {
+          "id": "esp-bachelor-com-marketing",
+          "name": "Communication & Marketing",
+          "level": "Bachelor 3",
+          "duration": "1 an",
+          "alternance": true,
+          "tags": ["communication", "marketing", "stratégie", "marque"],
+          "description": "Spécialisez-vous dans la stratégie de communication et le marketing opérationnel.",
+          "careers": ["Chef de projet communication", "Chargé de marketing", "Brand Manager junior"]
+        },
+        {
+          "id": "esp-bachelor-digital",
+          "name": "Marketing digital & E-réputation",
+          "level": "Bachelor 3",
+          "duration": "1 an",
+          "alternance": true,
+          "tags": ["digital", "marketing", "social-media", "communication"],
+          "description": "Maîtrisez les leviers du marketing digital et de la gestion de l'e-réputation.",
+          "careers": ["Social Media Manager", "Community Manager", "Digital Marketing Manager"]
+        },
+        {
+          "id": "esp-bachelor-evenementiel",
+          "name": "Événementiel",
+          "level": "Bachelor 3",
+          "duration": "1 an",
+          "alternance": true,
+          "tags": ["événementiel", "organisation", "communication", "relationnel"],
+          "description": "Formez-vous à la conception et à l'organisation d'événements professionnels.",
+          "careers": ["Chef de projet événementiel", "Chargé de production", "Organisateur d'événements"]
+        },
+        {
+          "id": "esp-bachelor-creation-pub",
+          "name": "Création publicitaire",
+          "level": "Bachelor 3",
+          "duration": "1 an",
+          "alternance": true,
+          "tags": ["création", "publicité", "direction-artistique", "créatif"],
+          "description": "Développez votre créativité au service des marques et des campagnes publicitaires.",
+          "careers": ["Concepteur-rédacteur junior", "Directeur artistique junior", "Créatif publicitaire"]
+        },
+        {
+          "id": "esp-mastere-retail",
+          "name": "Merchandising & Retail Marketing",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["commerce", "marketing", "retail", "stratégie", "business"],
+          "description": "Spécialisez-vous dans le marketing du point de vente et l'expérience client retail.",
+          "careers": ["Merchandiser", "Retail Manager", "Category Manager", "Visual Merchandiser"]
+        },
+        {
+          "id": "esp-mastere-business-digital",
+          "name": "Business Developer & Marketing Digital",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["business", "digital", "marketing", "stratégie", "commerce"],
+          "description": "Développez des compétences en acquisition digitale et développement commercial.",
+          "careers": ["Business Developer", "Growth Manager", "Digital Marketing Manager"]
+        },
+        {
+          "id": "esp-mastere-rse",
+          "name": "Communication RSE & imaginaires de marque",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["communication", "marque", "stratégie", "engagement", "storytelling"],
+          "description": "Intégrez les enjeux RSE dans la stratégie de communication des marques.",
+          "careers": ["Responsable RSE", "Consultant communication responsable", "Brand Manager"]
+        },
+        {
+          "id": "esp-mastere-entertainment",
+          "name": "Marketing de l'entertainment & des industries créatives",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["entertainment", "culture", "marketing", "créatif", "média"],
+          "description": "Spécialisez-vous dans le marketing des industries culturelles et créatives.",
+          "careers": ["Chef de projet culturel", "Marketing Manager entertainment", "Producer"]
+        },
+        {
+          "id": "esp-mastere-influence",
+          "name": "Marketing d'influence & événementiel",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["influence", "événementiel", "social-media", "communication", "relationnel"],
+          "description": "Maîtrisez les stratégies d'influence et l'organisation événementielle.",
+          "careers": ["Responsable influence", "Chef de projet événementiel", "Brand Partnership Manager"]
+        },
+        {
+          "id": "esp-mastere-media",
+          "name": "Stratégie Média & Activation Digitale",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["média", "publicité", "digital", "stratégie", "analytique"],
+          "description": "Élaborez des stratégies média cross-canal et des campagnes d'activation digitale.",
+          "careers": ["Media Planner", "Traffic Manager", "Consultant média", "Head of Acquisition"]
+        },
+        {
+          "id": "esp-mastere-da",
+          "name": "Direction artistique & Digital Design",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["direction-artistique", "design", "digital", "création", "créatif"],
+          "description": "Devenez directeur artistique spécialisé dans le design digital.",
+          "careers": ["Directeur artistique", "Digital Designer", "Creative Director"]
+        },
+        {
+          "id": "esp-mastere-brand",
+          "name": "Stratégie de marque & Brand Content",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["marque", "stratégie", "storytelling", "communication", "création"],
+          "description": "Construisez des stratégies de marque et des contenus à forte valeur ajoutée.",
+          "careers": ["Brand Manager", "Content Strategist", "Planneur stratégique"]
+        },
+        {
+          "id": "esp-mastere-corporate",
+          "name": "Communication corporate & institutionnelle",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["communication", "corporate", "relationnel", "stratégie", "média"],
+          "description": "Spécialisez-vous dans la communication d'entreprise et les relations institutionnelles.",
+          "careers": ["Directeur de communication", "Attaché de presse", "Consultant en affaires publiques"]
+        }
+      ]
+    },
+    {
+      "id": "conde",
+      "name": "Condé",
+      "fullName": "École de Condé",
+      "description": "La grande école des arts appliqués. Design, illustration, animation, photographie et patrimoine depuis 1989.",
+      "domain": "Arts appliqués & Design",
+      "website": "https://ecoles-conde.com",
+      "color": "#F59E0B",
+      "formations": [
+        {
+          "id": "conde-prepa-design",
+          "name": "Prépa Design",
+          "level": "Prépa",
+          "duration": "1 an",
+          "alternance": false,
+          "tags": ["design", "art", "création", "fondamentaux"],
+          "description": "Année préparatoire pour acquérir les fondamentaux du design et préparer votre orientation.",
+          "careers": []
+        },
+        {
+          "id": "conde-prepa-illustration",
+          "name": "Prépa Illustration-Animation",
+          "level": "Prépa",
+          "duration": "1 an",
+          "alternance": false,
+          "tags": ["illustration", "animation", "dessin", "art"],
+          "description": "Année préparatoire dédiée à l'illustration et l'animation.",
+          "careers": []
+        },
+        {
+          "id": "conde-bachelor-design-graphique",
+          "name": "Design graphique",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["design", "graphisme", "création", "visuel", "marque"],
+          "description": "Formez-vous au design graphique : identité visuelle, édition, packaging et digital.",
+          "careers": ["Designer graphique", "Directeur artistique", "Illustrateur", "Maquettiste"]
+        },
+        {
+          "id": "conde-bachelor-design-mode",
+          "name": "Design de mode",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["mode", "création", "luxe", "design", "art"],
+          "description": "Devenez designer de mode et créez vos propres collections.",
+          "careers": ["Styliste", "Designer textile", "Directeur artistique mode", "Chef de produit mode"]
+        },
+        {
+          "id": "conde-bachelor-design-espace",
+          "name": "Design d'espace",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["architecture", "espace", "design", "scénographie", "création"],
+          "description": "Concevez des espaces intérieurs, commerciaux et événementiels.",
+          "careers": ["Architecte d'intérieur", "Scénographe", "Space Planner", "Designer d'espace"]
+        },
+        {
+          "id": "conde-bachelor-design-produit",
+          "name": "Design produit",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["design", "produit", "innovation", "industriel", "création"],
+          "description": "Créez des produits innovants en alliant esthétique et fonctionnalité.",
+          "careers": ["Designer produit", "Designer industriel", "Chef de projet design"]
+        },
+        {
+          "id": "conde-bachelor-illustration",
+          "name": "Illustration",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["illustration", "dessin", "art", "création", "édition"],
+          "description": "Développez votre style d'illustration pour l'édition, la presse et le digital.",
+          "careers": ["Illustrateur", "Auteur de BD", "Character Designer", "Concept Artist"]
+        },
+        {
+          "id": "conde-bachelor-animation",
+          "name": "Animation 2D/3D",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["animation", "3d", "création", "motion", "audiovisuel"],
+          "description": "Apprenez les techniques d'animation 2D et 3D pour le cinéma, la publicité et le jeu vidéo.",
+          "careers": ["Animateur 2D/3D", "Motion Designer", "Storyboarder", "Character Animator"]
+        },
+        {
+          "id": "conde-bachelor-photo",
+          "name": "Photographie",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["photo", "visuel", "art", "création", "image"],
+          "description": "Maîtrisez l'art de la photographie : studio, reportage, post-production et direction photo.",
+          "careers": ["Photographe", "Directeur de la photographie", "Retoucheur", "Photographe de mode"]
+        },
+        {
+          "id": "conde-bachelor-patrimoine",
+          "name": "Préservation du patrimoine",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": false,
+          "tags": ["patrimoine", "restauration", "art", "conservation", "culture"],
+          "description": "Formez-vous à la préservation et la restauration d'œuvres d'art et d'objets patrimoniaux.",
+          "careers": ["Conservateur-restaurateur", "Assistant de conservation", "Régisseur d'œuvres"]
+        },
+        {
+          "id": "conde-mastere-da-graphique",
+          "name": "Direction artistique en design graphique",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["direction-artistique", "design", "graphisme", "marque", "création"],
+          "description": "Devenez directeur artistique et pilotez des projets de design graphique d'envergure.",
+          "careers": ["Directeur artistique", "Creative Director", "Brand Designer", "Design Manager"]
+        },
+        {
+          "id": "conde-mastere-archi-interieur",
+          "name": "Architecte d'intérieur & scénographie",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["architecture", "espace", "scénographie", "luxe", "design"],
+          "description": "Concevez des espaces d'exception : retail, hôtellerie, scénographie d'exposition.",
+          "careers": ["Architecte d'intérieur", "Scénographe", "Designer d'espace de luxe"]
+        },
+        {
+          "id": "conde-mastere-mode",
+          "name": "Mode et Création de Marque",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["mode", "marque", "luxe", "création", "business"],
+          "description": "Créez votre marque de mode ou intégrez les maisons de luxe en tant que directeur artistique.",
+          "careers": ["Directeur artistique mode", "Créateur de marque", "Designer senior mode"]
+        },
+        {
+          "id": "conde-mastere-illustration-bd",
+          "name": "Illustration – bande dessinée",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["illustration", "dessin", "édition", "art", "storytelling"],
+          "description": "Perfectionnez votre style et publiez vos premières œuvres.",
+          "careers": ["Auteur de BD", "Illustrateur éditorial", "Concept Artist senior"]
+        },
+        {
+          "id": "conde-mastere-animation",
+          "name": "Réalisateur film d'animation 2D/3D",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["animation", "réalisation", "audiovisuel", "3d", "création"],
+          "description": "Réalisez des films d'animation et intégrez les studios de production.",
+          "careers": ["Réalisateur d'animation", "Superviseur animation", "Directeur d'animation"]
+        },
+        {
+          "id": "conde-mastere-patrimoine",
+          "name": "Conservation-restauration du Patrimoine",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": false,
+          "tags": ["patrimoine", "restauration", "conservation", "art", "culture"],
+          "description": "Devenez expert en conservation et restauration d'œuvres d'art.",
+          "careers": ["Conservateur-restaurateur", "Expert en œuvres d'art", "Consultant patrimoine"]
+        }
+      ]
+    },
+    {
+      "id": "ecv",
+      "name": "ECV",
+      "fullName": "École de Création Visuelle",
+      "description": "Depuis 1984, l'école de référence en Design, Animation, Game et Digital. 4e meilleure école d'animation française.",
+      "domain": "Création visuelle & Animation",
+      "website": "https://www.ecv.fr",
+      "color": "#10B981",
+      "formations": [
+        {
+          "id": "ecv-bachelor-design-graphique",
+          "name": "Design graphique",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": false,
+          "tags": ["design", "graphisme", "direction-artistique", "création", "visuel"],
+          "description": "Formation complète en design graphique : typographie, identité, édition et digital.",
+          "careers": ["Designer graphique", "Directeur artistique", "Brand Designer"]
+        },
+        {
+          "id": "ecv-bachelor-archi-interieur",
+          "name": "Architecture d'intérieur",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": false,
+          "tags": ["architecture", "espace", "design", "scénographie"],
+          "description": "Concevez des espaces intérieurs innovants et fonctionnels.",
+          "careers": ["Architecte d'intérieur", "Scénographe", "Designer d'espace"]
+        },
+        {
+          "id": "ecv-bachelor-ui",
+          "name": "Conception UI",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": false,
+          "tags": ["ux-ui", "digital", "design", "interface", "tech"],
+          "description": "Spécialisez-vous dans la conception d'interfaces utilisateur.",
+          "careers": ["UI Designer", "Web Designer", "Product Designer"]
+        },
+        {
+          "id": "ecv-bachelor-animation",
+          "name": "Cinéma d'Animation 2D/3D",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": false,
+          "tags": ["animation", "3d", "audiovisuel", "création", "dessin"],
+          "description": "Formez-vous aux techniques d'animation 2D et 3D pour le cinéma et les médias.",
+          "careers": ["Animateur 2D/3D", "Storyboarder", "Character Designer", "Layout Artist"]
+        },
+        {
+          "id": "ecv-bachelor-game",
+          "name": "Game",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": false,
+          "tags": ["game", "jeu-vidéo", "création", "3d", "tech"],
+          "description": "Intégrez l'industrie du jeu vidéo avec une formation complète en game art et game design.",
+          "careers": ["Game Designer", "Game Artist", "Level Designer", "Environment Artist"]
+        },
+        {
+          "id": "ecv-mastere-da-360",
+          "name": "Direction Artistique 360°",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["direction-artistique", "design", "stratégie", "création", "marque"],
+          "description": "Devenez directeur artistique polyvalent sur tous les supports de communication.",
+          "careers": ["Directeur artistique", "Creative Director", "Design Director"]
+        },
+        {
+          "id": "ecv-mastere-da-digital",
+          "name": "Direction Artistique en Digital",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["digital", "direction-artistique", "ux-ui", "création", "design"],
+          "description": "Pilotez la création digitale : sites web, applications, campagnes digitales.",
+          "careers": ["Directeur artistique digital", "Digital Creative Director", "UX Director"]
+        },
+        {
+          "id": "ecv-mastere-da-pub",
+          "name": "Direction Artistique en Publicité",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["publicité", "direction-artistique", "création", "média", "créatif"],
+          "description": "Créez des campagnes publicitaires percutantes pour les plus grandes marques.",
+          "careers": ["Directeur artistique pub", "Creative Director agence", "Concepteur-rédacteur"]
+        },
+        {
+          "id": "ecv-mastere-ux-ui",
+          "name": "UX/UI Design",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["ux-ui", "design", "produit", "digital", "utilisateur"],
+          "description": "Maîtrisez l'UX research, le prototypage et la conception d'interfaces.",
+          "careers": ["UX Designer", "UI Designer", "Product Designer", "UX Researcher"]
+        },
+        {
+          "id": "ecv-mastere-dev-front",
+          "name": "Lead Developer Front End",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["tech", "développement", "digital", "code", "innovation"],
+          "description": "Devenez expert du développement front-end et du creative development.",
+          "careers": ["Lead Front-end Developer", "Creative Developer", "Tech Lead"]
+        },
+        {
+          "id": "ecv-mastere-animation",
+          "name": "Cinéma d'Animation 2D/3D",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["animation", "réalisation", "audiovisuel", "3d", "création"],
+          "description": "Réalisez des films d'animation professionnels et intégrez les grands studios.",
+          "careers": ["Réalisateur d'animation", "Superviseur animation", "Animation Director"]
+        },
+        {
+          "id": "ecv-mastere-game",
+          "name": "Game",
+          "level": "Mastère",
+          "duration": "2 ans",
+          "alternance": true,
+          "tags": ["game", "jeu-vidéo", "création", "production", "3d"],
+          "description": "Intégrez les studios de jeu vidéo les plus prestigieux en France et à l'international.",
+          "careers": ["Senior Game Designer", "Lead Game Artist", "Game Director", "Producer"]
+        }
+      ]
+    },
+    {
+      "id": "ing",
+      "name": "ING",
+      "fullName": "Institut National de Gemmologie",
+      "description": "Depuis 1967, la référence en gemmologie. Formez-vous à l'expertise des pierres précieuses et des gemmes.",
+      "domain": "Gemmologie & Joaillerie",
+      "website": "https://ingemmologie.com",
+      "color": "#8B5CF6",
+      "formations": [
+        {
+          "id": "ing-bachelor-gemmologue",
+          "name": "Bachelor Gemmologue Expert",
+          "level": "Bachelor",
+          "duration": "3 ans",
+          "alternance": true,
+          "tags": ["luxe", "expertise", "artisanat", "commerce", "précision"],
+          "description": "Apprenez à identifier et expertiser les pierres précieuses, gemmes et métaux précieux.",
+          "careers": ["Gemmologue", "Expert en gemmes", "Acheteur joaillerie", "Négociant en pierres précieuses"]
+        },
+        {
+          "id": "ing-formation-pro",
+          "name": "Expertise & réglementation de gemmes",
+          "level": "Formation professionnelle",
+          "duration": "Variable",
+          "alternance": false,
+          "tags": ["luxe", "expertise", "reconversion", "artisanat"],
+          "description": "Formation pour professionnels et passionnés souhaitant acquérir des compétences en gemmologie.",
+          "careers": ["Gemmologue", "Expert gemmes", "Consultant joaillerie"]
+        }
+      ]
+    }
+  ],
+  "quizQuestions": [
+    {
+      "id": "q1",
+      "question": "Comment te décrirais-tu le mieux ?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Créatif et artistique",
+          "scores": { "création": 3, "art": 3, "design": 2, "visuel": 2 }
+        },
+        {
+          "id": "b",
+          "label": "Analytique et stratégique",
+          "scores": { "stratégie": 3, "data": 2, "business": 2, "analytique": 2 }
+        },
+        {
+          "id": "c",
+          "label": "Technique et curieux",
+          "scores": { "tech": 3, "digital": 2, "innovation": 2, "code": 1 }
+        },
+        {
+          "id": "d",
+          "label": "Communicant et sociable",
+          "scores": { "communication": 3, "relationnel": 2, "média": 2, "événementiel": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Quel environnement de travail t'attire le plus ?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Un studio créatif avec des projets visuels",
+          "scores": { "design": 3, "création": 2, "visuel": 2, "art": 2 }
+        },
+        {
+          "id": "b",
+          "label": "Une agence de com' dynamique",
+          "scores": { "communication": 3, "publicité": 2, "marketing": 2, "créatif": 1 }
+        },
+        {
+          "id": "c",
+          "label": "Une startup tech innovante",
+          "scores": { "digital": 3, "tech": 2, "produit": 2, "innovation": 2 }
+        },
+        {
+          "id": "d",
+          "label": "Une maison de luxe prestigieuse",
+          "scores": { "luxe": 3, "mode": 2, "art": 1, "marque": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Qu'est-ce qui te passionne le plus ?",
+      "options": [
+        {
+          "id": "a",
+          "label": "L'image, le dessin, l'animation",
+          "scores": { "illustration": 3, "animation": 3, "visuel": 2, "dessin": 2, "art": 1 }
+        },
+        {
+          "id": "b",
+          "label": "Les marques, les tendances, les réseaux sociaux",
+          "scores": { "marketing": 3, "marque": 2, "social-media": 2, "communication": 2 }
+        },
+        {
+          "id": "c",
+          "label": "La technologie, les apps, l'innovation",
+          "scores": { "digital": 3, "tech": 3, "ux-ui": 2, "innovation": 2 }
+        },
+        {
+          "id": "d",
+          "label": "L'espace, les objets, les matières",
+          "scores": { "design": 2, "architecture": 3, "produit": 2, "espace": 2 }
+        },
+        {
+          "id": "e",
+          "label": "Les jeux vidéo et l'univers gaming",
+          "scores": { "game": 4, "jeu-vidéo": 3, "3d": 2, "création": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Comment préfères-tu travailler ?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Seul, dans ma bulle créative",
+          "scores": { "illustration": 2, "création": 2, "art": 2, "dessin": 1 }
+        },
+        {
+          "id": "b",
+          "label": "En équipe projet avec des profils variés",
+          "scores": { "gestion-projet": 2, "communication": 2, "stratégie": 1 }
+        },
+        {
+          "id": "c",
+          "label": "En mode agile avec des sprints",
+          "scores": { "digital": 2, "produit": 2, "tech": 2, "ux-ui": 1 }
+        },
+        {
+          "id": "d",
+          "label": "Au contact des clients et du terrain",
+          "scores": { "commerce": 2, "relationnel": 2, "événementiel": 2, "business": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "Quel serait ton projet de rêve ?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Créer l'identité visuelle d'une grande marque",
+          "scores": { "design": 3, "graphisme": 3, "direction-artistique": 2, "marque": 2 }
+        },
+        {
+          "id": "b",
+          "label": "Lancer une campagne virale sur les réseaux",
+          "scores": { "marketing": 3, "social-media": 3, "communication": 2, "influence": 2 }
+        },
+        {
+          "id": "c",
+          "label": "Concevoir une app qui change la vie des gens",
+          "scores": { "ux-ui": 3, "produit": 3, "digital": 2, "utilisateur": 2 }
+        },
+        {
+          "id": "d",
+          "label": "Réaliser un film d'animation ou un jeu vidéo",
+          "scores": { "animation": 3, "game": 3, "audiovisuel": 2, "3d": 2, "réalisation": 1 }
+        },
+        {
+          "id": "e",
+          "label": "Aménager des espaces exceptionnels",
+          "scores": { "architecture": 3, "espace": 3, "scénographie": 2, "design": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Quel niveau d'études vises-tu ?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Bac+3 (Bachelor) pour entrer vite sur le marché",
+          "scores": { "_level_bachelor": 5 }
+        },
+        {
+          "id": "b",
+          "label": "Bac+5 (Mastère) pour plus d'expertise",
+          "scores": { "_level_mastere": 5 }
+        },
+        {
+          "id": "c",
+          "label": "Je ne sais pas encore",
+          "scores": { "_level_bachelor": 1, "_level_mastere": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "L'alternance, c'est important pour toi ?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Oui, je veux être rémunéré et avoir de l'expérience",
+          "scores": { "_alternance_required": 5 }
+        },
+        {
+          "id": "b",
+          "label": "Pas forcément, je préfère me concentrer sur les cours",
+          "scores": { "_alternance_required": 0 }
+        },
+        {
+          "id": "c",
+          "label": "Ça dépend de la formation",
+          "scores": { "_alternance_required": 2 }
+        }
+      ]
+    }
+  ],
+  "scoringRules": {
+    "description": "Règles de scoring pour le matching formations",
+    "algorithm": {
+      "step1": "Initialiser un objet tagScores vide",
+      "step2": "Pour chaque réponse, additionner les scores de l'option choisie à tagScores",
+      "step3": "Pour chaque formation, calculer le score = somme des tagScores pour chaque tag de la formation",
+      "step4": "Appliquer les modificateurs de niveau et alternance",
+      "step5": "Trier les formations par score décroissant"
+    },
+    "levelModifier": {
+      "description": "Si l'utilisateur a un score _level_bachelor > 3, les formations Bachelor gagnent +10 points. Idem pour _level_mastere et Mastère.",
+      "bachelor_levels": ["Prépa", "Bachelor", "Bachelor 3"],
+      "mastere_levels": ["Mastère"]
+    },
+    "alternanceModifier": {
+      "description": "Si _alternance_required >= 4 et formation.alternance === true, ajouter +5 points"
+    },
+    "tieBreaker": {
+      "description": "En cas d'égalité, privilégier les formations avec plus de tags matchés"
+    }
+  },
+  "meta": {
+    "version": "2.0.0",
+    "lastUpdated": "2026-01-22",
+    "source": "AD Education Group",
+    "schools_count": 5,
+    "formations_count": 48
+  }
+}
