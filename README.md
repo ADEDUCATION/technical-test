@@ -20,12 +20,12 @@ Créer une **application web** composée de :
 
 ## 🛠️ Stack technique imposée
 
-| Technologie | Obligatoire |
-|-------------|-------------|
-| **Next.js 14+** (App Router) | ✅ |
-| **TypeScript** | ✅ |
-| **Tailwind CSS** | ✅ |
-| **Bibliothèque de composants** | shadcn/ui |
+| Technologie                    | Obligatoire |
+| ------------------------------ | ----------- |
+| **Next.js 14+** (App Router)   | ✅          |
+| **TypeScript**                 | ✅          |
+| **Tailwind CSS**               | ✅          |
+| **Bibliothèque de composants** | shadcn/ui   |
 
 > Vous recevrez une clé NPM pour accéder à notre bibliothèque de composants basée sur shadcn/ui.
 
@@ -55,7 +55,7 @@ interface School {
 interface Formation {
   id: string
   name: string
-  level: "Prépa" | "Bachelor" | "Bachelor 3" | "Mastère" | "Formation professionnelle"
+  level: 'Prépa' | 'Bachelor' | 'Bachelor 3' | 'Mastère' | 'Formation professionnelle'
   duration: string
   alternance: boolean
   tags: string[]
@@ -85,12 +85,15 @@ Un conseil :
 Suivre ces 3 étapes : initialisation, update lors de la réponse utilisateur, calcul du score par formation
 
 ### Classement
+
 - Trier les formations par score décroissant
 - La formation avec le meilleur score = recommandation principale
 - Les 2-3 suivantes = alternatives
 
 ### Gestion des égalités (bonus)
+
 En cas d'égalité, vous pouvez départager par :
+
 - Priorité au niveau correspondant (si l'utilisateur a indiqué Bachelor ou Mastère)
 - Priorité à l'alternance (si l'utilisateur l'a demandée)
 
@@ -99,11 +102,13 @@ En cas d'égalité, vous pouvez départager par :
 ## 📱 Fonctionnalités attendues
 
 ### Page d'accueil (se fier aux maquettes)
+
 - [ ] Présentation du quiz (titre, description, value prop)
 - [ ] Aperçu des 5 écoles (logos, domaines)
 - [ ] Bouton "Commencer le quiz"
 
 ### Quiz (se fier aux maquettes)
+
 - [ ] Affichage des 7 questions une par une (ou toutes visibles avec scroll)
 - [ ] Sélection d'une réponse par question
 - [ ] Indicateur de progression
@@ -111,6 +116,7 @@ En cas d'égalité, vous pouvez départager par :
 - [ ] Bouton "Voir mes résultats" (actif uniquement si toutes les questions sont répondues)
 
 ### Page résultat (se fier aux maquettes)
+
 - [ ] Formation recommandée mise en avant avec :
   - Nom de la formation
   - École associée (avec sa couleur)
@@ -129,30 +135,36 @@ En cas d'égalité, vous pouvez départager par :
 Par ordre de priorité :
 
 ### 1. Structure projet Next.js
+
 - Organisation des fichiers et dossiers
 - Utilisation correcte de l'App Router
 - Séparation des responsabilités (components, lib, types, etc.)
 
 ### 2. Typage TypeScript
+
 - Interfaces/types bien définis
 - Pas de `any`
 - Typage des props, états, fonctions
 
 ### 3. Composants réutilisables
+
 - Utilisation pertinente de la bibliothèque shadcn/ui
 - Création de composants customs réutilisables
 - Props bien pensées
 
 ### 4. Intégration de la maquette
+
 - Fidélité au design fourni
 - Attention aux détails (espacements, couleurs, typographie)
 
 ### 5. Gestion d'état
+
 - État du quiz (réponses, question courante)
 - Calcul du résultat
 - Navigation entre les étapes
 
 ### 6. Responsive
+
 - Mobile-first ou adaptation correcte
 - Pas de scroll horizontal non voulu
 - Éléments lisibles sur tous les écrans
