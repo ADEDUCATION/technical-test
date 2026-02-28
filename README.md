@@ -21,6 +21,7 @@ pnpm install
 ```bash
 pnpm dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Build
@@ -31,24 +32,24 @@ pnpm build
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start development server with Turbopack |
-| `pnpm build` | Build for production |
-| `pnpm start` | Start production server |
-| `pnpm lint` | Run ESLint |
-| `pnpm format` | Format all files with Prettier |
-| `pnpm format:check` | Check formatting without writing |
+| Command             | Description                             |
+| ------------------- | --------------------------------------- |
+| `pnpm dev`          | Start development server with Turbopack |
+| `pnpm build`        | Build for production                    |
+| `pnpm start`        | Start production server                 |
+| `pnpm lint`         | Run ESLint                              |
+| `pnpm format`       | Format all files with Prettier          |
+| `pnpm format:check` | Check formatting without writing        |
 
 ## Tech Stack
 
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Next.js | 16 | Framework (App Router) |
-| TypeScript | 5 | Type safety |
-| Tailwind CSS | 4 | Styling |
-| shadcn/ui | latest | UI components |
-| pnpm | 10 | Package manager |
+| Technology   | Version | Purpose                |
+| ------------ | ------- | ---------------------- |
+| Next.js      | 16      | Framework (App Router) |
+| TypeScript   | 5       | Type safety            |
+| Tailwind CSS | 4       | Styling                |
+| shadcn/ui    | latest  | UI components          |
+| pnpm         | 10      | Package manager        |
 
 ## Project Structure
 
@@ -78,9 +79,11 @@ src/
 ### Stack
 
 #### App Router over Pages Router
+
 Next.js App Router was used as required by the brief. It enables React Server Components by default, which improves initial load performance for static content like the home page.
 
 #### shadcn/ui
+
 shadcn/ui was chosen as required. Unlike traditional component libraries, components are copied into the codebase and fully owned — making them easy to customize to match the design.
 
 ### Scoring Algorithm
