@@ -27,6 +27,24 @@ const config: Config = {
                 top2: 'var(--gradient-top2)',
                 top3: 'var(--gradient-top3)',
             },
+            animation: {
+                floatCard:
+                    'floatCard var(--float-duration) ease-in-out var(--float-delay) infinite',
+                fadeInCard: 'fadeInCard 0.7s ease-out var(--fade-delay) both',
+            },
+            keyframes: {
+                floatCard: {
+                    '0%, 100%': { transform: 'var(--base-transform) translateY(0px)' },
+                    '50%': { transform: 'var(--base-transform) translateY(-12px)' },
+                },
+                fadeInCard: {
+                    from: { opacity: '0', transform: 'var(--base-transform) translateY(20px)' },
+                    to: {
+                        opacity: 'var(--target-opacity)',
+                        transform: 'var(--base-transform) translateY(0px)',
+                    },
+                },
+            },
         },
     },
     plugins: [],

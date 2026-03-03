@@ -4,6 +4,18 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
+@theme {
+    --color-primary: #6b58fd;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #64729b50;
+    --color-background: #f5f7fa;
+    --color-foreground: #1b2027;
+    --color-card: #ffffff;
+    --color-border: #e2e8f0;
+    --color-muted-foreground: #5a615f;
+    --color-accent: rgba(100, 114, 155, 0.07);
+}
+
 @layer base {
     * {
         cursor: none;
@@ -13,12 +25,25 @@
         --font-primary: 'Figtree', sans-serif;
         --font-secondary: 'Playfair Display', serif;
 
-        --color-primary: #6b58fd;
-        --color-background: #f5f7fa;
-        --color-foreground: #1b2027;
-        --color-muted-foreground: #5a615f;
-        --color-accent: #64729b12;
+        --background: #f5f7fa;
+        --foreground: #1b2027;
+        --card: #ffffff;
+        --border: #e2e8f0;
+        --muted-foreground: #5a615f;
+        --background-muted: rgba(100, 114, 155, 0.05);
 
+        /* primary */
+        --primary: #6b58fd;
+        --primary-light: #6e58fd26;
+        --primary-border: #6b58fd12;
+        --primary-background: #6b58fd12;
+
+        /* secondary */
+        --secondary: #1b2027;
+        --secondary-border: #64729b;
+        --secondary-background: #64729b0d;
+
+        /* gradients */
         --gradient-primary: linear-gradient(135deg, #7593ff, #6b58fd, #6503de);
         --gradient-overlay: linear-gradient(0deg, #000000, transparent);
 
@@ -77,6 +102,7 @@
             ),
             linear-gradient(0deg, #dcbfad, #dcbfad);
 
+        /* recommendations */
         --color-top1: #523800;
         --color-top2: #393838;
         --color-top3: #4f3322;
@@ -88,8 +114,8 @@
     }
 
     body {
-        background-color: var(--color-background);
-        color: var(--color-foreground);
+        background-color: var(--background);
+        color: var(--foreground);
         font-family: var(--font-primary);
         -webkit-font-smoothing: antialiased; /* smoother fonts on mac/retina */
         -moz-osx-font-smoothing: grayscale;
@@ -100,34 +126,44 @@
         max-width: 100%;
         display: block; /* removes bottom gap on inline images */
     }
+
+    @keyframes floatCard {
+        0%,
+        100% {
+            transform: var(--base-transform) translateY(0px);
+        }
+        50% {
+            transform: var(--base-transform) translateY(-12px);
+        }
+    }
+
+    @keyframes fadeInCard {
+        from {
+            opacity: 0;
+            transform: var(--base-transform) translateY(20px);
+        }
+        to {
+            opacity: var(--target-opacity);
+            transform: var(--base-transform) translateY(0px);
+        }
+    }
 }
 
 @layer components {
     .text-question {
         font-family: var(--font-primary);
-        font-size: 1.875rem; /* text-3xl */
         font-weight: 700;
         line-height: 2.25rem;
         letter-spacing: -0.45px;
-    }
-
-    .text-option-index {
-        font-family: var(--font-primary);
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 36px;
-        letter-spacing: -0.45px;
-        color: var(--color-muted-foreground);
     }
 
     .text-option-text {
-        font-family: var(--font-secondary);
-        font-size: 29px;
-        font-style: italic;
-        font-weight: 700;
-        line-height: 2.25rem;
+        font-family: var(--font-primary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 36px;
         letter-spacing: -0.45px;
-        color: var(--color-primary);
+        color: var(--muted-foreground);
     }
 
     .text-keyword {
@@ -136,6 +172,34 @@
         font-weight: 700;
         line-height: 2.25rem;
         letter-spacing: -0.45px;
-        color: var(--color-primary);
+        color: var(--primary);
+        text-decoration: underline;
+        text-decoration-color: var(--primary-light);
+        text-decoration-thickness: 6px;
+        text-underline-offset: -2px; /* ← descend le soulignement sous la baseline */
+        text-decoration-skip-ink: none; /* ← passe sous les jambages */
+    }
+
+    .text-title-gradient {
+        font-size: 225.34px;
+        font-weight: 900;
+        line-height: 70%; /* 157.738px */
+        letter-spacing: -3.38px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 13.72%, rgba(0, 0, 0, 0) 88.37%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-watermark {
+        text-transform: uppercase;
+        font-size: 288.112px;
+        font-weight: 900;
+        line-height: 100%;
+        letter-spacing: -4.322px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 13.72%, rgba(0, 0, 0, 0) 88.37%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }

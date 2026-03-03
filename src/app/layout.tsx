@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Cursor } from '@/components/cursor'
+import { Cursor } from '@/components/Cursor'
 import './globals.css'
 
 const geistSans = Geist({

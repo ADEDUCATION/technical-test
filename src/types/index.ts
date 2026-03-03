@@ -55,13 +55,6 @@ export interface QuizQuestion {
 
 export type QuizAnswers = Record<string, string> // questionId -> optionId
 
-export interface QuizState {
-    currentQuestion: number
-    answers: QuizAnswers
-    tagScores: TagScores // tag -> accumulated score
-    isCompleted: boolean
-}
-
 export interface FormationResult {
     formation: Formation
     school: School
@@ -73,4 +66,30 @@ export interface QuizResult {
     topRecommendation: FormationResult | null
     alternatives: FormationResult[]
     tagScores: TagScores
+}
+
+// UI
+
+export interface CardConfig {
+    /** Horizontal offset from center in viewport width units */
+    x: number
+    /** Vertical offset from center in viewport height units */
+    y: number
+    /** Z-axis depth in pixels (negative = further back) */
+    z: number
+    /** X-axis rotation in degrees */
+    rx: number
+    /** Y-axis rotation in degrees */
+    ry: number
+    /** Z-axis rotation in degrees */
+    rz: number
+    /** Uniform scale factor */
+    scale: number
+    /** Animation delay in seconds */
+    delay: number
+}
+
+export interface CardImage {
+    src: string
+    alt: string
 }
