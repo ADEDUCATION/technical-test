@@ -1,5 +1,5 @@
 type WatermarkProps = React.ComponentPropsWithoutRef<'span'> & {
-    label: string
+    label: string | number
     className?: string
 }
 
