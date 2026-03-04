@@ -30,19 +30,19 @@ export const CARD_CONFIGS: CardConfig[] = [
 export const CARD_IMAGES: CardImage[] = [
     {
         src: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400',
-        alt: 'Red Nike sneaker',
+        alt: 'Chaussure Nike rouge',
     },
     {
         src: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400',
-        alt: 'Piano keyboard',
+        alt: 'Clavier piano',
     },
     {
         src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400',
-        alt: 'Mountain landscape',
+        alt: 'Paysage montagnes',
     },
     {
         src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        alt: 'Sports car detail',
+        alt: 'Voiture de sport',
     },
     {
         src: 'https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?w=400',
@@ -50,30 +50,30 @@ export const CARD_IMAGES: CardImage[] = [
     },
     {
         src: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=400',
-        alt: 'Photography',
+        alt: 'Photographie',
     },
     {
         src: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400',
-        alt: 'Concert stage',
+        alt: 'Scène de concert',
     },
     {
         src: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400',
-        alt: 'Polaroid camera',
+        alt: 'Caméra Polaroid',
     },
     {
         src: 'https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400',
-        alt: 'Tech device',
+        alt: 'Tablette',
     },
     {
         src: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400',
-        alt: 'Headphones',
+        alt: 'Casque',
     },
     {
         src: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400',
-        alt: 'Architecture detail',
+        alt: 'Architecture',
     },
     {
         src: 'https://images.unsplash.com/photo-1560472355-536de3962603?w=400',
-        alt: 'Design workspace',
+        alt: 'Portefeuille',
     },
 ]

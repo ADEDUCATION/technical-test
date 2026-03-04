@@ -93,7 +93,7 @@ export function FloatingCard({ config, image, index }: FloatingCardProps) {
                 <div className="relative z-10">
                     <Image
                         src="/images/home/example.png"
-                        alt="School logo"
+                        alt="Logo école"
                         width={64}
                         height={64}
                         className="object-contain"
