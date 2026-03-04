@@ -780,6 +780,7 @@
         {
             "id": "q1",
             "question": "Comment te décrirais-tu le mieux ?",
+            "keyword": "décrirais-tu",
             "options": [
                 {
                     "id": "a",
@@ -811,6 +812,7 @@
         {
             "id": "q2",
             "question": "Quel environnement de travail t'attire le plus ?",
+            "keyword": "environnement",
             "options": [
                 {
                     "id": "a",
@@ -837,6 +839,7 @@
         {
             "id": "q3",
             "question": "Qu'est-ce qui te passionne le plus ?",
+            "keyword": "passionne",
             "options": [
                 {
                     "id": "a",
@@ -874,6 +877,7 @@
         {
             "id": "q4",
             "question": "Comment préfères-tu travailler ?",
+            "keyword": "travailler",
             "options": [
                 {
                     "id": "a",
@@ -900,6 +904,7 @@
         {
             "id": "q5",
             "question": "Quel serait ton projet de rêve ?",
+            "keyword": "projet de rêve",
             "options": [
                 {
                     "id": "a",
@@ -947,6 +952,7 @@
         {
             "id": "q6",
             "question": "Quel niveau d'études vises-tu ?",
+            "keyword": "niveau d'études",
             "options": [
                 {
                     "id": "a",
@@ -968,6 +974,7 @@
         {
             "id": "q7",
             "question": "L'alternance, c'est important pour toi ?",
+            "keyword": "alternance",
             "options": [
                 {
                     "id": "a",

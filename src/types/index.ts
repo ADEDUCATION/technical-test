@@ -50,6 +50,7 @@ export interface QuizOption {
 export interface QuizQuestion {
     id: string
     question: string
+    keyword?: string
     options: QuizOption[]
 }
 
