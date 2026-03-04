@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { useQuiz } from '@/hooks/useQuiz'
-import { calculateQuizResult } from '@/lib/scoring'
+import { calculateQuizResult } from '@/domain/scoring'
 import schoolsData from '@/data/schools-data.json'
 import type { SchoolsData } from '@/types'
 import { useCallback } from 'react'
@@ -57,7 +57,7 @@ export default function QuizPage() {
                 <div className="relative flex h-full w-full items-center justify-center">
                     <Image
                         src="/images/quiz-illustration.png"
-                        alt="Quiz illustration"
+                        alt="Illustration quiz"
                         width={429}
                         height={492}
                         className="object-contain"
