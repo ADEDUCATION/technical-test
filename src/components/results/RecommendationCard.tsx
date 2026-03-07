@@ -113,6 +113,7 @@ export default function RecommendationCard({
 
                 <ArrowButton
                     label="Candidater"
+                    href={school.website}
                     className={`absolute -bottom-5 left-1/2 w-50 -translate-x-1/2 ${
                         featured ? '' : 'text-primary bg-(--primary-background)'
                     }`}
