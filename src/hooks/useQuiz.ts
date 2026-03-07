@@ -1,9 +1,9 @@
 'use client'
 
 import { useReducer, useEffect, useCallback } from 'react'
-import { quizReducer, initialQuizState } from './quizReducer'
+import { quizReducer, initialQuizState } from '../domain/quizReducer'
 import { areAllQuestionsAnswered } from '@/domain/scoring'
-import type { QuizState } from './quizReducer'
+import type { QuizState } from '../domain/quizReducer'
 import type { QuizQuestion } from '@/types'
 
 const STORAGE_KEY = 'quiz-state'
