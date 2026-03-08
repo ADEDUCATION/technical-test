@@ -7,6 +7,7 @@ import RecommendationCard from '@/components/results/RecommendationCard'
 import ArrowButton from '@/components/home/ArrowButton'
 import Watermark from '@/components/Watermark'
 import KeywordText from '@/components/KeywordText'
+import Loader from '@/components/Loader'
 
 const RESULT_STORAGE_KEY = 'quiz-result'
 
@@ -41,7 +42,7 @@ export default function ResultsPage() {
         router.push('/quiz')
     }
 
-    if (!result) return null
+    if (!result) return <Loader fullscreen />
     if (!result.topRecommendation) return null
     const { topRecommendation, alternatives } = result
 
@@ -56,18 +57,20 @@ export default function ResultsPage() {
                         <KeywordText className="text-[23px]">correspondent</KeywordText> le mieux!
                     </h1>
 
-                    <p className="w-137.5 px-10 text-lg text-[15px] leading-7 font-normal tracking-wide text-(--color-text-light)">
+                    <p className="text-text-light w-137.5 px-10 text-lg text-[15px] leading-7 font-normal tracking-wide">
                         Ces recommendations sont basées sur vos réponses, vos priorités et les
                         caractéristiques réelles des formations.
                     </p>
                 </div>
 
                 <div className="flex items-end gap-12">
-                    <RecommendationCard result={alternatives[0]} variant="top2" />
-
+                    {alternatives[0] && (
+                        <RecommendationCard result={alternatives[0]} variant="top2" />
+                    )}
                     <RecommendationCard result={topRecommendation} variant="top1" featured />
-
-                    <RecommendationCard result={alternatives[1]} variant="top3" />
+                    {alternatives[1] && (
+                        <RecommendationCard result={alternatives[1]} variant="top3" />
+                    )}
                 </div>
 
                 <ArrowButton label="Refaire le quiz" onClick={handleRetake} variant="secondary" />
