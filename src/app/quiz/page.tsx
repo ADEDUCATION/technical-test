@@ -38,7 +38,7 @@ export default function QuizPage() {
         } else {
             goToNextQuestion()
         }
-    }, [isLastQuestion, state.answers, resetQuiz, goToNextQuestion, router, quizQuestions, schools])
+    }, [isLastQuestion, state.answers, resetQuiz, goToNextQuestion, router])
 
     if (!currentQuestion) return null
 
