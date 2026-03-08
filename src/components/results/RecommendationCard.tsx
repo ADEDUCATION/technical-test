@@ -1,5 +1,3 @@
-'use client'
-
 import type { FormationResult } from '@/types'
 import {
     Card,
@@ -12,6 +10,7 @@ import { Badge } from '@ad-education/ui/dist/components/Badge'
 import ArrowButton from '@/components/home/ArrowButton'
 import RecommendationPosition from './RecommendationPosition'
 import RecommendationImage from './RecommendationImage'
+import DownloadButton from '../DownloadButton'
 
 type BadgeVariant = 'top1' | 'top2' | 'top3'
 
@@ -111,13 +110,15 @@ export default function RecommendationCard({
                     ))}
                 </CardContent>
 
-                <ArrowButton
-                    label="Candidater"
-                    href={school.website}
-                    className={`absolute -bottom-5 left-1/2 w-50 -translate-x-1/2 ${
-                        featured ? '' : 'text-primary bg-(--primary-background)'
-                    }`}
-                />
+                <div className="absolute -bottom-5 left-1/2 flex w-full -translate-x-1/2 justify-center gap-4">
+                    <ArrowButton
+                        label="Candidater"
+                        href={school.website}
+                        className={`${featured ? '' : 'text-primary bg-(--primary-background)'}`}
+                    />
+
+                    <DownloadButton href="/files/brochure.pdf" label="Télécharger la brochure" />
+                </div>
             </Card>
         </div>
     )
