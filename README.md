@@ -1,213 +1,155 @@
-# Test Technique — Développeur Fullstack
+# Orientation Qiuz — AD Education
 
-## 🎯 Contexte
+An quiz helping prospective students discover which AD Education programme best matches their profile.
 
-Vous rejoignez l'équipe DSI-M d'AD Education, groupe d'enseignement supérieur regroupant plusieurs écoles (ESD, ESP, Condé, ECV, ING...).
+## Getting Started
 
-Votre mission : développer un **quiz d'orientation** permettant aux futurs étudiants de découvrir quelle formation leur correspond le mieux.
+### Prerequisites
 
----
+- Node.js 18+
+- pnpm
+- Access to the `@ad-education/ui` private npm registry (API key required)
 
-## 📋 Objectif
+### Installation
 
-Créer une **application web** composée de :
-
-1. **Une page d'accueil** présentant le quiz
-2. **Un quiz** de 7 questions
-3. **Une page résultat** affichant la formation recommandée + alternatives
-
----
-
-## 🛠️ Stack technique imposée
-
-| Technologie | Obligatoire |
-|-------------|-------------|
-| **Next.js 14+** (App Router) | ✅ |
-| **TypeScript** | ✅ |
-| **Tailwind CSS** | ✅ |
-| **Bibliothèque de composants** | shadcn/ui |
-
-> Vous recevrez une clé NPM pour accéder à notre bibliothèque de composants basée sur shadcn/ui.
-
----
-
-## 📦 Données fournies
-
-Un fichier `schools-data.json` vous est fourni contenant :
-
-- **5 écoles** avec leurs informations
-- **48 formations** avec tags, niveaux, descriptions, débouchés
-- **7 questions** avec options et tags associés
-- **Système de scoring** pour le matching
-
-### Structure simplifiée du JSON
-
-```typescript
-interface School {
-  id: string
-  name: string
-  fullName: string
-  domain: string
-  color: string
-  formations: Formation[]
-}
-
-interface Formation {
-  id: string
-  name: string
-  level: "Prépa" | "Bachelor" | "Bachelor 3" | "Mastère" | "Formation professionnelle"
-  duration: string
-  alternance: boolean
-  tags: string[]
-  description: string
-  careers: string[]
-}
-
-interface QuizQuestion {
-  id: string
-  question: string
-  options: {
-    id: string
-    label: string
-    scores: Record<string, number> // tag -> points
-  }[]
-}
+```bash
+pnpm install
 ```
 
----
+### Development
 
-## 🧮 Algorithme de matching
+```bash
+pnpm dev
+```
 
-Le JSON contient une clé scoringRules qui documente la logique attendue. À toi de l'implémenter.
-En résumé : chaque réponse porte des scores associés à des tags. Les formations ont elles aussi des tags. À toi de trouver comment relier les deux pour produire un classement.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Un conseil :
-Suivre ces 3 étapes : initialisation, update lors de la réponse utilisateur, calcul du score par formation
+### Build
 
-### Classement
-- Trier les formations par score décroissant
-- La formation avec le meilleur score = recommandation principale
-- Les 2-3 suivantes = alternatives
+```bash
+pnpm build
+```
 
-### Gestion des égalités (bonus)
-En cas d'égalité, vous pouvez départager par :
-- Priorité au niveau correspondant (si l'utilisateur a indiqué Bachelor ou Mastère)
-- Priorité à l'alternance (si l'utilisateur l'a demandée)
+### Available Scripts
 
----
+| Command             | Description                             |
+| ------------------- | --------------------------------------- |
+| `pnpm dev`          | Start development server with Turbopack |
+| `pnpm build`        | Build for production                    |
+| `pnpm start`        | Start production server                 |
+| `pnpm lint`         | Run ESLint                              |
+| `pnpm format`       | Format all files with Prettier          |
+| `pnpm format:check` | Check formatting without writing        |
 
-## 📱 Fonctionnalités attendues
+## Tech Stack
 
-### Page d'accueil (se fier aux maquettes)
-- [ ] Présentation du quiz (titre, description, value prop)
-- [ ] Aperçu des 5 écoles (logos, domaines)
-- [ ] Bouton "Commencer le quiz"
+| Technology   | Version | Purpose                |
+| ------------ | ------- | ---------------------- |
+| Next.js      | 16      | Framework (App Router) |
+| TypeScript   | 5       | Type safety            |
+| Tailwind CSS | 4       | Styling                |
+| shadcn/ui    | latest  | UI components          |
+| pnpm         | 10      | Package manager        |
 
-### Quiz (se fier aux maquettes)
-- [ ] Affichage des 7 questions une par une (ou toutes visibles avec scroll)
-- [ ] Sélection d'une réponse par question
-- [ ] Indicateur de progression
-- [ ] Possibilité de revenir en arrière
-- [ ] Bouton "Voir mes résultats" (actif uniquement si toutes les questions sont répondues)
+## Project Structure
 
-### Page résultat (se fier aux maquettes)
-- [ ] Formation recommandée mise en avant avec :
-  - Nom de la formation
-  - École associée (avec sa couleur)
-  - Niveau et durée
-  - Badge alternance si applicable
-  - Description
-  - Débouchés métiers (3-5 max)
-- [ ] 2-3 formations alternatives (affichage condensé)
-- [ ] Bouton "Refaire le quiz"
-- [ ] CTA fictifs : "Candidater", "Télécharger la brochure"
+```
+src/
+├── app/
+│   ├── page.tsx                    # Home page
+│   ├── quiz/
+│   │   └── page.tsx                # Quiz page
+│   ├── results/
+│   │   └── page.tsx                # Results page
+│   └── dev/icons/
+│       └── page.tsx                # Lists custom icons (dev only, hidden in prod)
+├── components/
+│   ├── ui/                         # shadcn/ui components (auto-generated, do not edit)
+│   ├── home/                       # Home page components
+│   ├── quiz/                       # Quiz page components
+│   ├── results/                    # Results page components
+│   └── ... shared components       # Shared components
+├── data/
+│   ├── schools-data.json           # Schools, formations and quiz questions data
+│   └── constants.ts                # Card configs and static UI constants
+├── domain/
+│   ├── scoring.ts                  # Formation matching algorithm
+│   └── quizReducer.ts              # Quiz state reducer (pure logic)
+├── hooks/
+│   └── useQuiz.ts                  # Quiz state management hook
+├── lib/
+│   └── utils.ts                    # Tailwind class merging utility (cn)
+└── types/
+    └── index.ts                    # TypeScript interfaces and types
+```
 
----
+## Tech Choices
 
-## ✅ Critères d'évaluation
+### Stack
 
-Par ordre de priorité :
+#### App Router over Pages Router
 
-### 1. Structure projet Next.js
-- Organisation des fichiers et dossiers
-- Utilisation correcte de l'App Router
-- Séparation des responsabilités (components, lib, types, etc.)
+Next.js App Router was chosen as required by the brief. It enables React Server Components by default, which improves initial load performance for static content like the home page, and aligns with the current Next.js direction.
 
-### 2. Typage TypeScript
-- Interfaces/types bien définis
-- Pas de `any`
-- Typage des props, états, fonctions
+#### shadcn/ui
 
-### 3. Composants réutilisables
-- Utilisation pertinente de la bibliothèque shadcn/ui
-- Création de composants customs réutilisables
-- Props bien pensées
+shadcn/ui was chosen as required by the brief. Unlike traditional component libraries, components are copied into the codebase and fully owned — making them easy to customize without fighting library abstractions or overriding styles.
 
-### 4. Intégration de la maquette
-- Fidélité au design fourni
-- Attention aux détails (espacements, couleurs, typographie)
+#### Separating UI from Business Logic
 
-### 5. Gestion d'état
-- État du quiz (réponses, question courante)
-- Calcul du résultat
-- Navigation entre les étapes
+The codebase is deliberately split into three concerns:
 
-### 6. Responsive
-- Mobile-first ou adaptation correcte
-- Pas de scroll horizontal non voulu
-- Éléments lisibles sur tous les écrans
+- `domain/` — pure TypeScript business logic (scoring algorithm, quiz state reducer) with no React dependency. This code could run in a CLI or a different framework without modification.
+- `hooks/` — React-specific state management that bridges the domain logic with the UI.
+- `components/` — UI only, no business logic.
 
----
+This makes the scoring algorithm independently testable and keeps components focused on rendering.
 
-## 🎁 Bonus (non obligatoires)
+### `useReducer` for Quiz State
 
-- [ ] Animations/transitions fluides entre les étapes
-- [ ] Persistance des réponses (localStorage) pour reprendre le quiz
-- [ ] Tests unitaires sur l'algorithme de scoring
-- [ ] Accessibilité (navigation clavier, ARIA labels)
-- [ ] Dark mode
-- [ ] Score de confiance affiché (ex: "92% de compatibilité")
+Quiz state (current question index, answers map, completion status) is managed with `useReducer` rather than multiple `useState` calls. This centralises all state transitions in one place (`quizReducer.ts`), making the logic easier to reason about, debug, and extend.
 
----
+The reducer handles six actions: `ANSWER_QUESTION`, `NEXT_QUESTION`, `PREV_QUESTION`, `GO_TO_QUESTION`, `RESET_QUIZ`, and `RESTORE_FROM_STORAGE`. The `GO_TO_QUESTION` action in particular powers the segmented progress bar, which lets users navigate back to any previously answered question.
 
-## 📁 Livrables attendus
+State is persisted to `localStorage` on every change and restored on mount, so users don't lose their progress on page refresh.
 
-1. **Repository Git** (GitHub, GitLab, ou archive ZIP)
-   - Code source complet
-   - README avec instructions d'installation et de lancement
+### Scoring Algorithm
 
-2. **README** contenant :
-   - Instructions d'installation (`npm install`, `npm run dev`)
-   - Choix techniques expliqués (pourquoi telle architecture, tel pattern)
-   - Difficultés rencontrées et solutions apportées
-   - Temps passé (estimation honnête)
+The matching algorithm (`domain/scoring.ts`) works in four steps:
 
-3. **Application fonctionnelle**
-   - `npm run dev` doit lancer l'app sans erreur
-   - `npm run build` doit compiler sans erreur
+1. **Build tag scores** — each answer carries a `tag → score` map; scores are summed across all answers.
+2. **Score each formation** — a formation's base score is the sum of its matched tags' scores. Only positive matches contribute.
+3. **Apply level bonus** — +10 if the student's answers indicate a Bachelor or Mastère preference and the formation matches.
+4. **Apply alternance bonus** — +5 if alternance is desired and the formation offers it.
+5. **Sort** — formations ranked by total score descending, matched tag count as tiebreaker.
+6. **Return top 3** — top result is the primary recommendation, next two are alternatives.
 
----
+### Data as JSON
 
-## ⏱️ Délai
+All schools, formations, and quiz questions live in a single `schools-data.json` file. This makes content easy to update without touching application code, and keeps the door open for replacing it with an API call in the future.
 
-Vous avez **1 semaine** à compter de la réception de ce brief.
+## Difficulties & Solutions
 
-Prenez le temps de bien faire — nous préférons un travail soigné à un travail bâclé mais "complet".
+### Layered card layout (results page)
 
----
+The recommendation cards required a specific visual layering: a position badge half-overlapping the top of a photo, which itself overlaps the top of the card content below it. Achieving this with CSS stacking (z-index + negative margins) while keeping the components cleanly separated required isolating each layer into its own component (`RecommendationPosition`, `RecommendationImage`) with explicit z-index values (`z-30`, `z-20`, `z-10`) on the parent wrapper.
 
-## 📎 Ressources fournies
+### Quiz state persistence
 
-- `schools-data.json` — Données des écoles, formations et questions
-- `maquette.fig` ou lien Figma — Maquettes du designer
-- Accès NPM à la bibliothèque de composants (clé fournie séparément)
+Saving quiz state to `localStorage` introduced a subtle hydration mismatch: the server renders with the initial empty state, but the client immediately restores a saved state on mount. This was resolved by treating the restore as a one-time effect on mount, keeping the initial render lightweight and consistent with the server output.
 
----
+## Time Spent
 
-## ❓ Questions ?
-
-Si vous avez des questions sur le brief ou les attendus, n'hésitez pas à nous contacter par email. Nous répondrons sous 24h.
-
----
-
-Bonne chance ! 🚀
+| Task                                                     | Time      |
+| -------------------------------------------------------- | --------- |
+| Create work plan                                         | 30 min    |
+| Go through material (README, data, Figma)                | 1h 30     |
+| Project setup: installing deps & setting up architecture | 1h        |
+| Setting up types                                         | 30 min    |
+| Scoring algorithm                                        | 2h        |
+| Quiz state                                               | 1h 30 min |
+| Home page (3D cards, animations)                         | 2h        |
+| Quiz page (state, UI, progress bar)                      | 3h        |
+| Results page & recommendation cards                      | 4h        |
+| Final polish                                             | 2h        |
+| **Total**                                                | **~18h**  |

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Playfair+Display:ital,wght@1,700&display=swap');
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme {
+    --color-primary: #6b58fd;
+    --color-primary-foreground: #ffffff;
+    --color-primary-border: #6b58fd12;
+
+    --color-secondary: #e7e4ff;
+    --color-secondary-foreground: #6b58fd;
+    --color-secondary-border: #64729b;
+
+    --color-neutral: #64729b0d;
+    --color-neutral-foreground: #1b2027;
+    --color-neutral-background: #ffffff;
+    --color-neutral-border: #d1d5db;
+
+    --color-card: white;
+    --card-foreground: #1b2027;
+
+    --color-text-light: #5a615f;
+}
+
+@layer base {
+    * {
+        cursor: none;
+    }
+
+    :root {
+        --font-primary: 'Figtree', sans-serif;
+        --font-secondary: 'Playfair Display', serif;
+
+        --color-background: #f5f7fa;
+        --color-text: #1b2027;
+        --color-text-light: #5a615f;
+
+        /* recommendations */
+        --color-top1: #523800;
+        --color-top2: #393838;
+        --color-top3: #4f3322;
+
+        --gradient-primary: linear-gradient(135deg, #7593ff, #6b58fd, #6503de);
+
+        --gradient-top1:
+            linear-gradient(
+                101deg,
+                rgba(163, 163, 163, 0.3) 3.56%,
+                rgba(91, 91, 91, 0.3) 14.26%,
+                rgba(218, 218, 217, 0.3) 18.97%,
+                rgba(217, 217, 216, 0.3) 33.08%,
+                rgba(78, 78, 78, 0.3) 40.21%,
+                rgba(51, 51, 51, 0.3) 47.58%,
+                rgba(109, 109, 112, 0.3) 55.94%,
+                rgba(241, 241, 241, 0.3) 64.31%,
+                rgba(250, 250, 250, 0.3) 79.76%,
+                rgba(115, 115, 115, 0.3) 84.15%,
+                rgba(94, 94, 94, 0.3) 89.94%,
+                rgba(131, 131, 131, 0.3) 96.63%,
+                rgba(174, 174, 174, 0.3) 102.26%
+            ),
+            linear-gradient(0deg, #fdc958, #fdc958);
+        --gradient-top2:
+            linear-gradient(
+                101deg,
+                rgba(163, 163, 163, 0.3) 3.56%,
+                rgba(91, 91, 91, 0.3) 14.26%,
+                rgba(218, 218, 217, 0.3) 18.97%,
+                rgba(217, 217, 216, 0.3) 33.08%,
+                rgba(78, 78, 78, 0.3) 40.21%,
+                rgba(51, 51, 51, 0.3) 47.58%,
+                rgba(109, 109, 112, 0.3) 55.94%,
+                rgba(241, 241, 241, 0.3) 64.31%,
+                rgba(250, 250, 250, 0.3) 79.76%,
+                rgba(115, 115, 115, 0.3) 84.15%,
+                rgba(94, 94, 94, 0.3) 89.94%,
+                rgba(131, 131, 131, 0.3) 96.63%,
+                rgba(174, 174, 174, 0.3) 102.26%
+            ),
+            linear-gradient(0deg, #dadad9, #dadad9);
+        --gradient-top3:
+            linear-gradient(
+                101deg,
+                rgba(163, 163, 163, 0.3) 3.56%,
+                rgba(91, 91, 91, 0.3) 14.26%,
+                rgba(218, 218, 217, 0.3) 18.97%,
+                rgba(217, 217, 216, 0.3) 33.08%,
+                rgba(78, 78, 78, 0.3) 40.21%,
+                rgba(51, 51, 51, 0.3) 47.58%,
+                rgba(109, 109, 112, 0.3) 55.94%,
+                rgba(241, 241, 241, 0.3) 64.31%,
+                rgba(250, 250, 250, 0.3) 79.76%,
+                rgba(115, 115, 115, 0.3) 84.15%,
+                rgba(94, 94, 94, 0.3) 89.94%,
+                rgba(131, 131, 131, 0.3) 96.63%,
+                rgba(174, 174, 174, 0.3) 102.26%
+            ),
+            linear-gradient(0deg, #dcbfad, #dcbfad);
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+        font-family: var(--font-primary);
+        -webkit-font-smoothing: antialiased; /* smoother fonts on mac/retina */
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        display: block; /* removes bottom gap on inline images */
+    }
+
+    @keyframes floatCard {
+        0%,
+        100% {
+            transform: var(--base-transform) translateY(0px);
+        }
+        50% {
+            transform: var(--base-transform) translateY(-12px);
+        }
+    }
+
+    @keyframes fadeInCard {
+        from {
+            opacity: 0;
+            transform: var(--base-transform) translateY(20px);
+        }
+        to {
+            opacity: var(--target-opacity);
+            transform: var(--base-transform) translateY(0px);
+        }
+    }
+}
+
+@layer components {
+    .text-question {
+        font-family: var(--font-primary);
+        font-weight: 700;
+        line-height: 2.25rem;
+        letter-spacing: -0.45px;
+    }
+
+    .text-option-text {
+        font-family: var(--font-primary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: -0.45px;
+        color: var(--color-text-light);
+    }
+
+    .text-keyword {
+        font-family: var(--font-secondary);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 2.25rem;
+        letter-spacing: -0.45px;
+        color: var(--color-primary);
+        text-decoration: underline;
+        text-decoration-color: #6e58fd26;
+        text-decoration-thickness: 6px;
+        text-underline-offset: -2px; /* ← descend le soulignement sous la baseline */
+        text-decoration-skip-ink: none; /* ← passe sous les jambages */
+    }
+
+    .text-title-gradient {
+        font-size: 225.34px;
+        font-weight: 900;
+        line-height: 70%; /* 157.738px */
+        letter-spacing: -3.38px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 13.72%, rgba(0, 0, 0, 0) 88.37%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-watermark {
+        text-transform: uppercase;
+        font-size: 288.112px;
+        font-weight: 900;
+        line-height: 100%;
+        letter-spacing: -4.322px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 13.72%, rgba(0, 0, 0, 0) 88.37%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
