@@ -1,4 +1,3 @@
-import React from 'react'
 import IconAlertCircle from '@ad-education/ui/dist/icons/IconAlertCircle'
 import IconAlertTriangle from '@ad-education/ui/dist/icons/IconAlertTriangle'
 import IconArrowDown from '@ad-education/ui/dist/icons/IconArrowDown'

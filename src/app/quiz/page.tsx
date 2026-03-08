@@ -23,7 +23,6 @@ export default function QuizPage() {
         state,
         currentQuestion,
         isLastQuestion,
-        allAnswered,
         answerQuestion,
         goToNextQuestion,
         resetQuiz,
@@ -70,7 +69,7 @@ export default function QuizPage() {
             <div className="my-3 mr-10 ml-3 flex w-1/2 flex-col">
                 <Watermark label={currentQuestionNumber} />
 
-                <div className="my-8 mt-auto mb-22 px-28">
+                <div className="my-8 mt-auto mb-22">
                     <QuestionText
                         question={currentQuestion.question}
                         keyword={currentQuestion.keyword}
