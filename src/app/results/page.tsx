@@ -49,14 +49,14 @@ export default function ResultsPage() {
         <>
             <Watermark label="Résultats" className="absolute text-center" />
 
-            <div className="relative flex min-h-screen w-full flex-col items-center justify-around px-4 py-4">
+            <div className="relative flex min-h-screen w-full flex-col items-center justify-around gap-8 px-4 py-4">
                 <div className="flex flex-col items-center text-center">
-                    <h1 className="spacing-2xl text-2xl leading-8 font-bold">
+                    <h1 className="spacing-2xl max-w-sm text-2xl leading-8 font-bold">
                         Voici les formations qui vous{' '}
                         <KeywordText className="text-[23px]">correspondent</KeywordText> le mieux!
                     </h1>
 
-                    <p className="w-137.5 px-10 text-lg text-[15px] leading-7 font-normal tracking-wide text-(--muted-foreground)">
+                    <p className="w-137.5 px-10 text-lg text-[15px] leading-7 font-normal tracking-wide text-(--color-text-light)">
                         Ces recommendations sont basées sur vos réponses, vos priorités et les
                         caractéristiques réelles des formations.
                     </p>
@@ -70,11 +70,7 @@ export default function ResultsPage() {
                     <RecommendationCard result={alternatives[1]} variant="top3" />
                 </div>
 
-                <ArrowButton
-                    label="Refaire le quiz"
-                    onClick={handleRetake}
-                    className="text-primary w-50 bg-(--primary-background)"
-                />
+                <ArrowButton label="Refaire le quiz" onClick={handleRetake} variant="secondary" />
             </div>
         </>
     )

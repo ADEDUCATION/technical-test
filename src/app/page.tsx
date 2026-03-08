@@ -37,7 +37,7 @@ export default function Home() {
                     {', '}en quelques clics.
                 </h1>
 
-                <p className="w-137.5 px-10 text-lg text-[15px] leading-7 font-normal tracking-wide text-(--muted-foreground)">
+                <p className="w-137.5 px-10 text-lg text-[15px] leading-7 font-normal tracking-wide text-(--color-text-light)">
                     Découvre la formation de tes rêves en répondant à sept questions sur toi, tes
                     aspirations, tes motivations,&nbsp;…
                 </p>

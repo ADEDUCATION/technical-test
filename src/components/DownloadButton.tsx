@@ -9,16 +9,12 @@ type DownloadButtonProps = React.ComponentProps<typeof Button> & {
     href: string
 }
 
-export default function DownloadButton({ label, href, ...props }: DownloadButtonProps) {
+export default function DownloadButton({ label, href, className, ...props }: DownloadButtonProps) {
     return (
         <Tooltip>
             <TooltipTrigger asChild>
                 <a href={href} download>
-                    <Button
-                        aria-label={label}
-                        className="text-primary cursor-pointer bg-(--primary-background)"
-                        {...props}
-                    >
+                    <Button aria-label={label} className={`cursor-pointer ${className}`} {...props}>
                         <IconDownload />
                     </Button>{' '}
                 </a>

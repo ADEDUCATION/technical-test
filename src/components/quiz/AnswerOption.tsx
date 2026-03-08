@@ -16,8 +16,8 @@ export function AnswerOption({ option, index, isSelected, onSelect }: QuizOption
             aria-pressed={isSelected}
             className={`flex w-full items-center gap-4 rounded-lg border p-4 text-left transition-all duration-200 ${
                 isSelected
-                    ? 'text-primary border-(--primary-border) bg-(--primary-background)'
-                    : 'bg-card text-muted-foreground hover:text-foreground border-transparent hover:border-(--secondary-border) hover:bg-(--secondary-background)'
+                    ? 'bg-secondary text-primary border-primary-border'
+                    : 'bg-neutral-background hover:text-neutral-foreground hover:bg-neutral hover:border-neutral-border border-transparent'
             }`}
         >
             <div className="flex gap-1">

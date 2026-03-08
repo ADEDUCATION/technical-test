@@ -54,10 +54,6 @@ export default function RecommendationCard({
     const { formation, school } = result
     const { label, icon, color, imgSrc } = RECOMMENDATION_CONFIG[variant]
 
-    const badgeClass = featured
-        ? 'px-3 py-1 text-primary bg-(--primary-background)'
-        : 'px-3 py-1 text-muted-foreground bg-(--secondary-background)'
-
     const infoBadges = [
         formation.level,
         formation.duration,
@@ -66,7 +62,7 @@ export default function RecommendationCard({
 
     return (
         <div className="relative w-full max-w-sm">
-            <div className="relative z-30 mb-4 flex justify-center">
+            <div className="relative z-30 -mb-4 flex justify-center">
                 <RecommendationPosition color={color} icon={icon} label={label} />
             </div>
 
@@ -78,7 +74,13 @@ export default function RecommendationCard({
                 <CardHeader>
                     <div className="mb-6 flex flex-wrap gap-2">
                         {infoBadges.map((badge) => (
-                            <Badge key={badge} variant="secondary" className={badgeClass}>
+                            <Badge
+                                key={badge}
+                                variant={featured ? 'secondary' : 'neutral'}
+                                className={`px-3 py-1 ${
+                                    featured ? '' : 'bg-neutral) text-neutral-foreground'
+                                }`}
+                            >
                                 {badge}
                             </Badge>
                         ))}
@@ -98,11 +100,9 @@ export default function RecommendationCard({
                     {formation.careers.map((career) => (
                         <Badge
                             key={career}
-                            variant="secondary"
+                            variant={featured ? 'secondary' : 'neutral'}
                             className={`mr-1 mb-1 px-3 py-1 ${
-                                featured
-                                    ? 'text-primary bg-(--primary-background)'
-                                    : 'text-muted-foreground bg-(--secondary-background)'
+                                featured ? '' : 'bg-neutral text-neutral-foreground'
                             }`}
                         >
                             {career}
@@ -114,10 +114,14 @@ export default function RecommendationCard({
                     <ArrowButton
                         label="Candidater"
                         href={school.website}
-                        className={`${featured ? '' : 'text-primary bg-(--primary-background)'}`}
+                        variant={featured ? 'default' : 'secondary'}
                     />
 
-                    <DownloadButton href="/files/brochure.pdf" label="Télécharger la brochure" />
+                    <DownloadButton
+                        href="/files/brochure.pdf"
+                        label="Télécharger la brochure"
+                        variant={featured ? 'default' : 'secondary'}
+                    />
                 </div>
             </Card>
         </div>

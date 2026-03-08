@@ -16,7 +16,7 @@ export default function ArrowButton({
 }: ArrowButtonProps) {
     if (href) {
         return (
-            <Button className={`cursor-pointer ${className}`} asChild {...props}>
+            <Button aria-label={label} className={`cursor-pointer ${className}`} asChild {...props}>
                 <Link href={href}>
                     {label}
                     <IconArrowRight />
@@ -26,7 +26,12 @@ export default function ArrowButton({
     }
 
     return (
-        <Button className={`cursor-pointer ${className}`} onClick={onClick} {...props}>
+        <Button
+            aria-label={label}
+            className={`cursor-pointer ${className}`}
+            onClick={onClick}
+            {...props}
+        >
             {label}
             <IconArrowRight />
         </Button>

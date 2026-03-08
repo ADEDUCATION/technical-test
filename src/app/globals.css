@@ -7,13 +7,19 @@
 @theme {
     --color-primary: #6b58fd;
     --color-primary-foreground: #ffffff;
-    --color-secondary: #64729b50;
-    --color-background: #f5f7fa;
-    --color-foreground: #1b2027;
-    --color-card: #ffffff;
-    --color-border: #e2e8f0;
-    --color-muted-foreground: #5a615f;
-    --color-accent: rgba(100, 114, 155, 0.07);
+    --color-primary-border: #6b58fd12;
+
+    --color-secondary: #e7e4ff;
+    --color-secondary-foreground: #6b58fd;
+    --color-secondary-border: #64729b;
+
+    --color-neutral: #64729b0d;
+    --color-neutral-foreground: #1b2027;
+    --color-neutral-background: #ffffff;
+    --color-neutral-border: #d1d5db;
+
+    --color-card: white;
+    --card-foreground: #1b2027;
 }
 
 @layer base {
@@ -25,27 +31,16 @@
         --font-primary: 'Figtree', sans-serif;
         --font-secondary: 'Playfair Display', serif;
 
-        --background: #f5f7fa;
-        --foreground: #1b2027;
-        --card: #ffffff;
-        --border: #e2e8f0;
-        --muted-foreground: #5a615f;
-        --background-muted: rgba(100, 114, 155, 0.05);
+        --color-background: #f5f7fa;
+        --color-text: #1b2027;
+        --color-text-light: #5a615f;
 
-        /* primary */
-        --primary: #6b58fd;
-        --primary-light: #6e58fd26;
-        --primary-border: #6b58fd12;
-        --primary-background: #e7e4ff;
+        /* recommendations */
+        --color-top1: #523800;
+        --color-top2: #393838;
+        --color-top3: #4f3322;
 
-        /* secondary */
-        --secondary: #1b2027;
-        --secondary-border: #64729b;
-        --secondary-background: #64729b0d;
-
-        /* gradients */
         --gradient-primary: linear-gradient(135deg, #7593ff, #6b58fd, #6503de);
-        --gradient-overlay: linear-gradient(0deg, #000000, transparent);
 
         --gradient-top1:
             linear-gradient(
@@ -101,11 +96,6 @@
                 rgba(174, 174, 174, 0.3) 102.26%
             ),
             linear-gradient(0deg, #dcbfad, #dcbfad);
-
-        /* recommendations */
-        --color-top1: #523800;
-        --color-top2: #393838;
-        --color-top3: #4f3322;
     }
 
     html {
@@ -114,8 +104,8 @@
     }
 
     body {
-        background-color: var(--background);
-        color: var(--foreground);
+        background-color: var(--color-background);
+        color: var(--color-text);
         font-family: var(--font-primary);
         -webkit-font-smoothing: antialiased; /* smoother fonts on mac/retina */
         -moz-osx-font-smoothing: grayscale;
@@ -163,7 +153,7 @@
         font-weight: 400;
         line-height: 36px;
         letter-spacing: -0.45px;
-        color: var(--muted-foreground);
+        color: var(--color-text-light);
     }
 
     .text-keyword {
@@ -172,9 +162,9 @@
         font-weight: 700;
         line-height: 2.25rem;
         letter-spacing: -0.45px;
-        color: var(--primary);
+        color: var(--color-primary);
         text-decoration: underline;
-        text-decoration-color: var(--primary-light);
+        text-decoration-color: #6e58fd26;
         text-decoration-thickness: 6px;
         text-underline-offset: -2px; /* ← descend le soulignement sous la baseline */
         text-decoration-skip-ink: none; /* ← passe sous les jambages */
